@@ -57,6 +57,8 @@ ticket_totali = ticket_adulto or ticket_anziano or ticket_bambino
 
 age = int(input("Inserisci la tua età\n"))
 
+print("\n --MODIFICA--")
+
 if age < 18 and age > 1:
     print("Hai accesso al biglietto per bambini")
     

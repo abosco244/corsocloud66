@@ -1,5 +1,7 @@
-# ESERCIZIO 1
+3# ESERCIZIO 1
 bool = True
+#commetno di alessandro
+#classe che gestise i numeri
 
 # a b c Lorenzo
 while bool:

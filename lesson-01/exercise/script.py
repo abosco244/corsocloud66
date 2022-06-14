@@ -1,6 +1,7 @@
 # ESERCIZIO 1
 bool = True
 
+# a b c Lorenzo
 while bool:
     x = input("Inserisci un numero:\n")
     if x:

@@ -8,32 +8,24 @@ import mysql.connector
 class DBUtility:
     endpoint="localhost"
     user="root"
-    password="Password01!"
+    password="root"
     database="SAKILA"
     
 
-    def getConnection(self):
+    @classmethod
+    def getConnection(cls):
         print("creo la connessione")  
         connessione=None      
         try:
             # Connessione a MySQL
             connessione = mysql.connector.connect(
             # Parametri per la connessione
-            host=self.endpoint,
-            user=self.user,
-            password=self.password,
-            database=self.database)
+            host=cls.endpoint,
+            user=cls.user,
+            password=cls.password,
+            database=cls.database)
             print(connessione)
         except mysql.connector.Error as e:
             print("Error reading data from MySQL table", e)
         return connessione
-
         
-        
-        
-
-
-
-
-
-    

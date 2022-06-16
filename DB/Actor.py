@@ -22,9 +22,10 @@ class Actor:
             for row in records:
                     nome= row[0] 
                     cognome= row[1]
-                    lista.add(nome,cognome)
+                    lista.append(f"{nome}, {cognome}")
             
-
+            return lista
+        
         except mysql.connector.Error as e:
                     print("Error reading data from MySQL table", e)
         finally:

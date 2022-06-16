@@ -59,9 +59,9 @@ class Actor:
 
     # Task 2
     @staticmethod
-    def getMoviesByYear(first_name, last_name, order=False):
+    def getMoviesByYear(first_name, last_name, reverse=False):
         connessione = DBUtility.getConnection()
-        order = 'ASC' if order else 'DESC'
+        reverse = 'ASC' if reverse else 'DESC'
 
         try:
             cursore = connessione.cursor()
@@ -71,7 +71,7 @@ class Actor:
                             AND a.actor_id = fa.actor_id
                             AND a.first_name = %s
                             AND a.last_name = %s
-                            ORDER BY f.release_year {order}"""
+                            ORDER BY f.release_year {reverse}"""
             cursore.execute(query, (first_name, last_name))
 
             """Extract the resulting table from the processed query"""
@@ -103,3 +103,4 @@ class Actor:
         finally:
             if connessione.is_connected():
                 connessione.close()
+                

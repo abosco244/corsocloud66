@@ -1,4 +1,3 @@
-from mimetypes import init
 # Importazione del modulo MySQL
 import mysql.connector
 #host = 	34.175.195.122

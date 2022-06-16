@@ -3,8 +3,8 @@ import mysql.connector
 from DBUtility import DBUtility
 
 class Actor:
-    @classmethod
-    def getAllActors(cls):
+    @staticmethod
+    def getAllActors():
         connessione = DBUtility.getConnection()
         print(connessione)
         lista = list()

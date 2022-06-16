@@ -8,7 +8,7 @@ import mysql.connector
 class DBUtility:
     endpoint="localhost"
     user="root"
-    password="root"
+    password="nicolanontesan9sei"
     database="SAKILA"
     
 
